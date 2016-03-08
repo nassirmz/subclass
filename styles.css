@@ -1,30 +1,92 @@
 body, html{
   height:100%;
+  
 }
 body{
-  margin: 0px;
-  background-color:#444;
+  margin: 0;
+  background: url("http://nice-cool-pics.com/data/media/25/swirls_dj_dance_floor.jpg") center center;
   font-size: 18px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+
 }
 body, a:link, a:visited, a:active{
-  color: lightblue;
+  color: #FCD792;
+  text-decoration: none;
+  font-family: "monospace";
+  margin: 10px;
+
+}
+body a:hover {
+  color: #a89350;
+  transition: all 0.3s;
 }
 .title, .actionButton{
-  padding:5px 12px;
+  padding:0px 12px 0px 0px;
   float:right;
+
 }
 .topbar{
-  height:32px;
-  background-color: #555;
+  height:50px;
+  background-color: black;
+  padding: 20px 10px 0px 10px;
 }
 .title{
-  background-color: #777;
+  background-color: black;
 }
+
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  height: 150px;
+  width: 150px;
   position:absolute;
 }
-.fadeDancer {
-  border: 10px solid blue;
+.blinky {
+  background: url("http://pngimg.com/upload/bear_PNG1200.png") center center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
+.fady {
+  background: url("https://media.giphy.com/media/Q5QmR3cT9U8CY/giphy.gif") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius:50%;
+
+}
+.shaky {
+  background: url("http://i565.photobucket.com/albums/ss94/HiddenMS/Snail.png") center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.bouncy {
+  background: url("https://lh3.googleusercontent.com/-g6vb7KvLc90/VQ4DShOroTI/AAAAAAAAAPI/Cp20Bq5Ow6A/w426-h511/dancingcat-2.gif") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10%;
+  width: 120px;
+}
+
+.bunny{
+  background: url("http://orig02.deviantart.net/911a/f/2013/242/e/3/bunny_dancing_gif__click_on_it____by_hyperndepressed-d6jvllg.gif") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  border: 5px white solid;
+  height: 130px;
+  width: 130px;
+}
+
+.rotate{
+  -webkit-animation: orbit 4s linear infinite;
+}
+
+@-webkit-keyframes orbit{
+  from{
+    -webkit-transform: rotate(0deg) translateX(50px) rotate(0deg);
+  }
+  to{
+    -webkit-transform: rotate(360deg) translateY(50px) rotate(-360deg);
+  }
+}
+
+
