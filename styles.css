@@ -1,6 +1,5 @@
 body, html{
   height:100%;
-  
 }
 body{
   margin: 0;
@@ -22,6 +21,13 @@ body a:hover {
   color: #a89350;
   transition: all 0.3s;
 }
+
+.container{
+  height: 600px;
+  width: 900px;
+  margin: 200px 25px 50px;
+}
+
 .title, .actionButton{
   padding:0px 12px 0px 0px;
   float:right;
