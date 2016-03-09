@@ -12,3 +12,7 @@ BlinkyDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
   this.$node.addClass("blinky").toggle();
 };
+
+BlinkyDancer.prototype.lineUp = function() {
+  this.$node.css({"top": 300});
+}

@@ -14,3 +14,7 @@ RotateDancer.prototype.step = function() {
     this.$node.addClass("rotate").addClass("bunny");
   // animate({width: "20%", opacity: 0.4, borderWidth: "10px"}, 1500)
 };
+
+RotateDancer.prototype.lineUp = function() {
+  this.$node.css({"top": 300});
+}

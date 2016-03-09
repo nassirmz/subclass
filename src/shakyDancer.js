@@ -11,8 +11,12 @@ ShakyDancer.prototype.constructor = ShakyDancer;
 ShakyDancer.prototype.step = function() {
   
   Dancer.prototype.step.call(this);
-  for(var x = 1; x < 5; x++){
-    this.$node.addClass("shaky").animate({ left: this.left-10 }, 50).animate({ left: this.left }, 50);
-  }
+  //for(var x = 1; x < 5; x++){
+    this.$node.addClass("shaky").animate({ left: this.left-50 }, 100).animate({ left: this.left }, 100);
+  //}
   // animate({width: "20%", opacity: 0.4, borderWidth: "10px"}, 1500)
 };
+
+ShakyDancer.prototype.lineUp = function() {
+  this.$node.css({"top": 300});
+}

@@ -9,7 +9,7 @@ $(document).ready(function(){
      * maker functions available in the global scope, clicking that node
      * will call the function to make the dancer.
      */
-
+     event.preventDefault();
     /* dancerMakerFunctionName is a string which must match
      * one of the dancer maker functions available in global scope.
      * A new object of the given type will be created and added
@@ -31,5 +31,17 @@ $(document).ready(function(){
     window.dancers.push(dancer);
     $('.container').append(dancer.$node);
   });
-
+  
+  $(".line-up").on("click", function(event) {
+    event.preventDefault();
+    window.dancers.forEach(function(dancer, i) {
+      dancer.lineUp();
+    });
+  });
+  //var pair = [];
+  // window.dancers.forEach(function)
+  // $(".pair-up").on("click", function(event){
+  //   event.preventDefault();
+  //   window.dancers.forEach)
+  // });
 });

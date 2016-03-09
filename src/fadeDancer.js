@@ -7,8 +7,11 @@ var FadeDancer = function(top, left, timeBetweenSteps){
 
 FadeDancer.prototype = Object.create(Dancer.prototype);
 FadeDancer.prototype.constructor = FadeDancer;
-FadeDancer.prototype.step = function() {
-  
+FadeDancer.prototype.step = function() {  
 Dancer.prototype.step.call(this);
   this.$node.addClass("fady").fadeIn().fadeOut();
 };
+
+FadeDancer.prototype.lineUp = function() {
+  this.$node.css({"top": 300});
+}

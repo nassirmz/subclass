@@ -10,5 +10,9 @@ BouncyDancer.prototype.constructor = BouncyDancer;
 BouncyDancer.prototype.step = function() {
   
   Dancer.prototype.step.call(this);
-  this.$node.addClass("bouncy").animate( {top: this.top-50}, 200).animate({top: this.top}, 200);
+  this.$node.addClass("cat").toggleClass("bouncy");
 };
+
+BouncyDancer.prototype.lineUp = function() {
+  this.$node.css({"top": 300});
+}
