@@ -12,7 +12,3 @@ BouncyDancer.prototype.step = function() {
   Dancer.prototype.step.call(this);
   this.$node.addClass("cat").toggleClass("bouncy");
 };
-
-BouncyDancer.prototype.lineUp = function() {
-  this.$node.css({"top": 300});
-}

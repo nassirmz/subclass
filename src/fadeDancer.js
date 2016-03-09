@@ -11,7 +11,3 @@ FadeDancer.prototype.step = function() {
 Dancer.prototype.step.call(this);
   this.$node.addClass("fady").fadeIn().fadeOut();
 };
-
-FadeDancer.prototype.lineUp = function() {
-  this.$node.css({"top": 300});
-}

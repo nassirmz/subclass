@@ -3,10 +3,7 @@ body, html{
 }
 body{
   margin: 0;
-  background: url("http://nice-cool-pics.com/data/media/25/swirls_dj_dance_floor.jpg") center center;
   font-size: 18px;
-  background-size: cover;
-  background-repeat: no-repeat;
   background-color: black;
 
 }
@@ -23,11 +20,15 @@ body a:hover {
 }
 
 .container{
-  height: 600px;
-  width: 900px;
-  margin: 200px 25px 50px;
+  height: 85%;
+  width: 100%;
+  position: relative;
+  background: url("http://nice-cool-pics.com/data/media/25/swirls_dj_dance_floor.jpg") center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: black;
+  overflow: hidden;
 }
-
 .title, .actionButton{
   padding:0px 12px 0px 0px;
   float:right;
@@ -38,6 +39,14 @@ body a:hover {
   background-color: black;
   padding: 20px 10px 0px 10px;
 }
+
+.bottomBar{
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  background-color: black;
+  width: 100%;
+}
 .title{
   background-color: black;
 }
@@ -45,7 +54,8 @@ body a:hover {
 .dancer{
   height: 150px;
   width: 150px;
-  position:absolute;
+  position: absolute;
+  transition: all 0.3s;
 }
 .blinky {
   background: url("http://pngimg.com/upload/bear_PNG1200.png") center center;
@@ -64,12 +74,20 @@ body a:hover {
   background-size: contain;
   background-repeat: no-repeat;
 }
+.cat {
+  height: 40px;
+  width: 40px;
+  border-radius: 10%;
+  transition: all 0.3s;
+}
 .bouncy {
   background: url("https://lh3.googleusercontent.com/-g6vb7KvLc90/VQ4DShOroTI/AAAAAAAAAPI/Cp20Bq5Ow6A/w426-h511/dancingcat-2.gif") center center;
   background-size: cover;
   background-repeat: no-repeat;
+  width: 150px;
+  height: 200px;
   border-radius: 10%;
-  width: 120px;
+  transition: all 0.3;
 }
 
 .bunny{
@@ -78,8 +96,6 @@ body a:hover {
   background-repeat: no-repeat;
   border-radius: 50%;
   border: 5px white solid;
-  height: 130px;
-  width: 130px;
 }
 
 .rotate{
