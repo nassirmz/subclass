@@ -62,6 +62,14 @@ $(document).ready(function(){
       pair[1].setPosition(height + 50, width + 50);
     });
   });
+  
+  $(".container").on("mouseover", "span", function(){
+    $(this).css({"height": 200, "width": 200});
+  });
+
+  $(".container").on("mouseleave", "span", function(){
+    $(this).css({"height": 150, "width": 150});
+  });
 
   $(".line-up").on("click", function(event) {
     event.preventDefault();
