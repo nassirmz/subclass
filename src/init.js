@@ -32,16 +32,42 @@ $(document).ready(function(){
     $('.container').append(dancer.$node);
   });
   
+    var result = [];
+
+  $(".pair-up").on("click", function(event) {
+    event.preventDefault();
+
+    var pairs = window.dancers;
+    while(pairs.length > 1) {
+      var pair= [];
+      pair.push(pairs.shift());
+      var paired = pairs.reduce(function(a,b) {
+        var distanceA = Math.sqrt(Math.pow(Math.abs(a.top - pair[0].top), 2) + Math.pow(Math.abs(a.left - pair[0]).left, 2));
+        var distanceB = Math.sqrt(Math.pow(Math.abs(b.top - pair[0].top), 2) + Math.pow(Math.abs(b.left - pair[0]).left, 2));
+        if(distanceA < distanceB) {
+          return a;
+        } else {
+          return b;
+        }
+      });
+      pair.push(paired);
+      pairs.splice(pairs.indexOf(pair[1]),1);
+      result.push(pair);
+    }
+    result.forEach(function(pair, i) {
+      var height = $(".container").height() * Math.random();
+      var width = $(".container").width() * Math.random();
+
+      pair[0].setPosition(height, width);
+      pair[1].setPosition(height + 50, width + 50);
+    });
+  });
+
   $(".line-up").on("click", function(event) {
     event.preventDefault();
     window.dancers.forEach(function(dancer, i) {
       dancer.lineUp();
     });
   });
-  //var pair = [];
-  // window.dancers.forEach(function)
-  // $(".pair-up").on("click", function(event){
-  //   event.preventDefault();
-  //   window.dancers.forEach)
-  // });
+  
 });
